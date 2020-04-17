@@ -1,4 +1,6 @@
 # docker-python
+![Check if a Docker image can be built](https://github.com/pigs-will-fly/docker-python/workflows/Check%20if%20a%20Docker%20image%20can%20be%20built/badge.svg)
+
 Alpine-based docker image for running Python 3.8 applications
 
 ## How to pull it?
