@@ -1,7 +1,15 @@
 # docker-python
 Alpine-based docker image for running Python 3.8 applications
 
-https://hub.docker.com/repository/docker/suggap/python
+## How to pull it?
+
+> https://hub.docker.com/repository/docker/suggap/python
+
+```
+docker pull suggap/python:3.8
+```
+
+## What's inside?
 
 ```
 $ python -V
