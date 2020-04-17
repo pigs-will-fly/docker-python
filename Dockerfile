@@ -18,3 +18,5 @@ RUN apk update &&\
     pip install cffi gevent mysqlclient rcssmin &&\
     apk del .build-deps &&\
     rm -rf /root/* /tmp/*
+
+RUN python -V; pip list
