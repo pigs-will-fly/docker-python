@@ -15,8 +15,8 @@ RUN apk update &&\
         gcc \
         libffi-dev \
         mariadb-dev &&\
-    pip install cffi \\
-        gevent==20.6.2 \\
+    pip install cffi \
+        gevent==20.6.2 \
         mysqlclient==1.4.6 \
         rcssmin==1.0.6 \
     &&\
