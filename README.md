@@ -15,22 +15,24 @@ docker pull suggap/python:3.8
 
 ```
 $ python -V
-Python 3.8.2
+Python 3.8.3
 
 $ pip list
-Package     Version
------------ -------
-cffi        1.14.0 
-gevent      1.5.0  
-greenlet    0.4.15 
-mysqlclient 1.4.6  
-pip         20.0.2 
-pycparser   2.20   
-rcssmin     1.0.6  
-setuptools  46.1.1 
-wheel       0.34.2 
+Package        Version
+-------------- -------
+cffi           1.14.0
+gevent         20.6.2
+greenlet       0.4.16
+mysqlclient    1.4.6
+pip            20.1.1
+pycparser      2.20
+rcssmin        1.0.6
+setuptools     47.1.1
+wheel          0.34.2
+zope.event     4.4
+zope.interface 5.1.0
 
 $ docker images
 REPOSITORY                                      TAG                        IMAGE ID            CREATED             SIZE
-suggap/python                                   3.8                        b2468342219f        42 seconds ago      160MB
+suggap/python                                   3.8.1                      b2468342219f        42 seconds ago      160MB
 ```
