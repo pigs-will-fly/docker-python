@@ -15,7 +15,7 @@ docker pull suggap/python:3.8.3
 
 ```
 $ python -V
-Python 3.8.2
+Python 3.8.3
 
 $ pip list
 Package        Version
@@ -23,17 +23,17 @@ Package        Version
 cffi           1.14.0
 gevent         20.6.2
 greenlet       0.4.16
-mysqlclient    1.4.6
+mysqlclient    2.0.1
 pip            20.1.1
 pycparser      2.20
 rcssmin        1.0.6
 regex          2020.4.4
-setuptools     46.1.1
+setuptools     47.1.1
 wheel          0.34.2
 zope.event     4.4
 zope.interface 5.1.0
 
 $ docker images | head -n2
 REPOSITORY                                          TAG                          IMAGE ID            CREATED             SIZE
-pigs-will-fly/suggap                                latest                       b69f7ca766d0        22 seconds ago      233MB
+pigs-will-fly/suggap                                latest                       3d2e7980ec29        1 second ago        115MB
 ```
