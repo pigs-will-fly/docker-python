@@ -18,7 +18,7 @@ RUN apk update &&\
     pip install --upgrade pip && pip install \
         cffi \
         gevent==20.6.2 \
-        mysqlclient==1.4.6 \
+        mysqlclient==2.0.1 \
         regex==2020.4.4 \
         rcssmin==1.0.6 \
     &&\
