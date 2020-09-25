@@ -8,7 +8,7 @@ Alpine-based docker image for running Python 3.8 applications
 > https://hub.docker.com/repository/docker/suggap/python
 
 ```
-docker pull suggap/python:3.8.3.1
+docker pull suggap/python:3.8.6
 ```
 
 ## What's inside?
