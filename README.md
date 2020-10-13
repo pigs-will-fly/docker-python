@@ -1,21 +1,21 @@
 # docker-python
 ![Check if a Docker image can be built](https://github.com/pigs-will-fly/docker-python/workflows/Check%20if%20a%20Docker%20image%20can%20be%20built/badge.svg)
 
-Alpine-based docker image for running Python 3.8 applications
+Alpine-based docker image for running Python 3.9 applications (with dependencies that take some time do be compiled).
 
 ## How to pull it?
 
 > https://hub.docker.com/repository/docker/suggap/python
 
 ```
-docker pull suggap/python:3.8.6
+docker pull suggap/python:3.9.0
 ```
 
 ## What's inside?
 
 ```
 $ python -V
-Python 3.8.6
+Python 3.9.0
 
 $ pip list
 Package        Version
@@ -31,9 +31,9 @@ regex          2020.4.4
 setuptools     50.3.0
 wheel          0.35.1
 zope.event     4.5.0
-zope.interface 5.1.0
+zope.interface 5.1.2
 
 $ docker images | head -n2
 REPOSITORY                                    TAG                 IMAGE ID            CREATED             SIZE
-pigs-will-fly/suggap                          1601029698          73c3838a9dd9        1 second ago        78.9MB
+pigs-will-fly/suggap                          1602600570          2b5c703340d6        1 second ago        81MB
 ```
