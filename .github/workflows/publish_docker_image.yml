@@ -29,5 +29,5 @@ jobs:
     # https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow
     - name: Log in and publish to Registry
       run: |
-        echo ${{ secrets.GH_TOKEN }} | docker login ${DOCKER_REPOSITORY} -u ${DOCKER_PUSH_USER} --password-stdin
+        echo ${{ secrets.GITHUB_TOKEN }} | docker login ${DOCKER_REPOSITORY} -u ${DOCKER_PUSH_USER} --password-stdin
         docker push ${DOCKER_TAG}
