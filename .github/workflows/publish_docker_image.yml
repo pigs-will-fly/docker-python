@@ -11,7 +11,7 @@ jobs:
     # shared env variables
     env:
         DOCKER_REPOSITORY: docker.pkg.github.com
-        DOCKER_IMAGE_NAME: pigs-will-fly/docker-python/base  # this needs to start with the (organisation name)/(repo name) path
+        DOCKER_IMAGE_NAME: pigs-will-fly/docker-python/base  # follow OWNER/REPOSITORY/IMAGE_NAME schema
         DOCKER_PUSH_USER: piggy  # this can be anything, Github token is used to log into the registry
         
     runs-on: ubuntu-latest
