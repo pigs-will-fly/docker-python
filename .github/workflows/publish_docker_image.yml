@@ -26,6 +26,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --tag ${DOCKER_TAG} --build-arg GITHUB_SHA=${GITHUB_SHA}
 
+    # https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow
     - name: Log in and publish to Registry
       run: |
         echo ${{ secrets.GH_TOKEN }} | docker login ${DOCKER_REPOSITORY} -u ${DOCKER_PUSH_USER} --password-stdin
