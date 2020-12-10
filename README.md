@@ -20,20 +20,20 @@ Python 3.9.0
 $ pip list
 Package        Version
 -------------- --------
-cffi           1.14.3
+cffi           1.14.4
 gevent         20.9.0
 greenlet       0.4.17
-mysqlclient    2.0.1
-pip            20.2.3
+mysqlclient    2.0.2
+pip            20.3.1
 pycparser      2.20
 rcssmin        1.0.6
 regex          2020.4.4
-setuptools     50.3.0
-wheel          0.35.1
+setuptools     50.3.2
+wheel          0.36.0
 zope.event     4.5.0
-zope.interface 5.1.2
+zope.interface 5.2.0
 
 $ docker images | head -n2
 REPOSITORY                                    TAG                 IMAGE ID            CREATED             SIZE
-pigs-will-fly/suggap                          1602600570          2b5c703340d6        1 second ago        81MB
+pigs-will-fly/suggap                          1607592199          fc470ffdb731        1 second ago        82.6MB
 ```
