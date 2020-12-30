@@ -1,7 +1,8 @@
-# Base image for Python 3.9 app with the following libraries and PyPI packages:
+# Base image for Python 3.9 app with the following libraries and PyPI packages (that take quite a long time to compile):
 # * gevent
 # * cffi
 # * MySQL connector for mysqlclient
+# * regex
 # * rccsmin
 
 # https://hub.docker.com/_/python
@@ -17,7 +18,7 @@ RUN apk update &&\
         mariadb-dev &&\
     pip install --upgrade pip && pip install \
         cffi \
-        gevent==20.9.0 \
+        gevent==20.12.1 \
         mysqlclient==2.0.2 \
         regex==2020.4.4 \
         rcssmin==1.0.6 \
