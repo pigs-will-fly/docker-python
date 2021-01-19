@@ -8,7 +8,7 @@ Alpine-based docker image for running Python 3.9 applications (with dependencies
 > https://hub.docker.com/repository/docker/suggap/python
 
 ```
-docker pull suggap/python:3.9.0
+docker pull suggap/python:3.9.0-3
 ```
 
 ## What's inside?
@@ -21,8 +21,8 @@ $ pip list
 Package        Version
 -------------- --------
 cffi           1.14.4
-gevent         20.12.1
-greenlet       0.4.17
+gevent         21.1.1
+greenlet       1.0.0
 mysqlclient    2.0.2
 pip            20.3.3
 pycparser      2.20
@@ -34,6 +34,6 @@ zope.event     4.5.0
 zope.interface 5.2.0
 
 $ docker images | head -n2
-REPOSITORY                                    TAG                 IMAGE ID            CREATED             SIZE
-pigs-will-fly/suggap                          1607592199          fc470ffdb731        1 second ago        82.6MB
+REPOSITORY                                           TAG                 IMAGE ID            CREATED                  SIZE
+pigs-will-fly/docker-python                          latest              b596a5497be3        Less than a second ago   94MB
 ```
