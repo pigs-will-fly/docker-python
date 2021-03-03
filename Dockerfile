@@ -18,7 +18,7 @@ RUN apk update &&\
         mariadb-dev &&\
     pip install --upgrade pip && pip install \
         cffi \
-        gevent==21.1.1 \
+        gevent==21.1.2 \
         mysqlclient==2.0.2 \
         regex==2020.4.4 \
         rcssmin==1.0.6 \
