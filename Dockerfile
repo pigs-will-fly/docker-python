@@ -8,6 +8,8 @@
 # https://hub.docker.com/_/python
 FROM python:3.9.5-alpine
 
+COPY requirements.txt /tmp/requirements.txt
+
 # https://github.com/gliderlabs/docker-alpine/issues/181#issuecomment-444857401
 RUN apk update &&\
     apk add --no-cache mariadb-connector-c-dev &&\
@@ -16,7 +18,7 @@ RUN apk update &&\
         gcc \
         libffi-dev \
         mariadb-dev &&\
-    pip install --upgrade pip && pip install -r requirements.txt \
+    pip install --upgrade pip && pip install -r /tmp/requirements.txt \
     &&\
     apk del .build-deps &&\
     rm -rf /root/* /tmp/*
