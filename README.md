@@ -8,7 +8,7 @@ Alpine-based docker image for running Python 3.9 applications (with dependencies
 > https://hub.docker.com/repository/docker/suggap/python
 
 ```
-docker pull suggap/python:3.9.2
+docker pull suggap/python:3.9.5
 ```
 
 ## What's inside?
