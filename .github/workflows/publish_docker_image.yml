@@ -1,4 +1,4 @@
-name: Publish Docker image to pkg.github.com
+name: Publish Docker image to ghcr.io public repository
 
 # https://help.github.com/en/actions/reference/events-that-trigger-workflows
 on:
@@ -31,9 +31,13 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    # https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages
-    - name: Set Docker image name and release tag
-      run: echo "DOCKER_TAG=${REGISTRY}/${IMAGE_NAME}:${GITHUB_REF:10}" >> $GITHUB_ENV
+    - name: Set commit tag that will be used to tag a specific version
+      run: echo "COMMIT_TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
+      # run: echo "COMMIT_TAG=v3.9.5" >> $GITHUB_ENV
+
+    - name: Show env variables
+      run: |
+        env | sort
 
     # https://github.com/marketplace/actions/build-and-push-docker-images
     - name: Build and push Docker image
@@ -41,8 +45,12 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${GITHUB_REF:10}, latest
+        tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.COMMIT_TAG }}, ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
         build-args: |
           GITHUB_SHA=${GITHUB_SHA}
         cache-from: |
-          ${REGISTRY}/${IMAGE_NAME}:latest
+          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
+
+    - name: Inspect an image
+      run: |
+        docker images | head -n3
