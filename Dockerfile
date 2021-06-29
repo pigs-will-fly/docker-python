@@ -6,7 +6,7 @@
 # * rccsmin
 
 # https://hub.docker.com/_/python
-FROM python:3.9.2-alpine
+FROM python:3.9.5-alpine
 
 # https://github.com/gliderlabs/docker-alpine/issues/181#issuecomment-444857401
 RUN apk update &&\
