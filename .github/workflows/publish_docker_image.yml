@@ -6,28 +6,43 @@ on:
   release:
     types: [ published ]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
 jobs:
   build:
-    # shared env variables
+    # https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages
     env:
-        DOCKER_REPOSITORY: docker.pkg.github.com
-        DOCKER_IMAGE_NAME: pigs-will-fly/docker-python/base  # follow OWNER/REPOSITORY/IMAGE_NAME schema
-        DOCKER_PUSH_USER: piggy  # this can be anything, Github token is used to log into the registry
-        
+        REGISTRY: ghcr.io
+        IMAGE_NAME: ${{ github.repository }}
+
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
     steps:
     - uses: actions/checkout@master
+    
+    - name: Log in to the Container registry
+      uses: docker/login-action@v1
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
 
-    # https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-commands-for-github-actions#setting-an-environment-variable
-    # e.g. docker.pkg.github.com/elecena/backend/bots-worker:1.9
+    # https://docs.github.com/en/actions/guides/publishing-docker-images#publishing-images-to-github-packages
     - name: Set Docker image name and release tag
-      run: echo "DOCKER_TAG=${DOCKER_REPOSITORY}/${DOCKER_IMAGE_NAME}:${GITHUB_REF:10}" >> $GITHUB_ENV
+      run: echo "DOCKER_TAG=${REGISTRY}/${IMAGE_NAME}:${GITHUB_REF:10}" >> $GITHUB_ENV
 
-    - name: Build the Docker image
-      run: docker build . --tag ${DOCKER_TAG} --build-arg GITHUB_SHA=${GITHUB_SHA}
-
-    # https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow
-    - name: Log in and publish to Registry
-      run: |
-        echo ${{ secrets.GITHUB_TOKEN }} | docker login ${DOCKER_REPOSITORY} -u ${DOCKER_PUSH_USER} --password-stdin
-        docker push ${DOCKER_TAG}
+    # https://github.com/marketplace/actions/build-and-push-docker-images
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: ${GITHUB_REF:10}, latest
+        build-args: |
+          GITHUB_SHA=${GITHUB_SHA}
+        cache-from: |
+          ${REGISTRY}/${IMAGE_NAME}:latest
