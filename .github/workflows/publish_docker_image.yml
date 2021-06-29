@@ -32,8 +32,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set commit tag that will be used to tag a specific version
-      # run: echo "COMMIT_TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
-      run: echo "COMMIT_TAG=v3.9.5" >> $GITHUB_ENV
+      run: echo "COMMIT_TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
+      # run: echo "COMMIT_TAG=v3.9.5" >> $GITHUB_ENV
 
     - name: Show env variables
       run: |
