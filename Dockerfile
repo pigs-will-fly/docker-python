@@ -6,7 +6,9 @@
 # * rccsmin
 
 # https://hub.docker.com/_/python
-FROM python:3.9.2-alpine
+FROM python:3.9.5-alpine
+
+COPY requirements.txt /tmp/requirements.txt
 
 # https://github.com/gliderlabs/docker-alpine/issues/181#issuecomment-444857401
 RUN apk update &&\
@@ -16,12 +18,7 @@ RUN apk update &&\
         gcc \
         libffi-dev \
         mariadb-dev &&\
-    pip install --upgrade pip && pip install \
-        cffi \
-        gevent==21.1.2 \
-        mysqlclient==2.0.2 \
-        regex==2020.4.4 \
-        rcssmin==1.0.6 \
+    pip install --upgrade pip && pip install -r /tmp/requirements.txt \
     &&\
     apk del .build-deps &&\
     rm -rf /root/* /tmp/*

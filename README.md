@@ -15,25 +15,25 @@ docker pull suggap/python:3.9.2
 
 ```
 $ python -V
-Python 3.9.2
+Python 3.9.5
 
 $ pip list
 Package        Version
 -------------- --------
 cffi           1.14.5
 gevent         21.1.2
-greenlet       1.0.0
+greenlet       1.1.0
 mysqlclient    2.0.2
-pip            21.0.1
+pip            21.1.3
 pycparser      2.20
 rcssmin        1.0.6
 regex          2020.4.4
-setuptools     53.0.0
+setuptools     57.0.0
 wheel          0.36.2
 zope.event     4.5.0
-zope.interface 5.2.0
+zope.interface 5.4.0
 
 $ docker images | head -n2
-REPOSITORY                                           TAG                 IMAGE ID            CREATED                  SIZE
-pigs-will-fly/docker-python                          latest              b596a5497be3        Less than a second ago   82.1MB
+REPOSITORY                    TAG            IMAGE ID       CREATED        SIZE
+pigs-will-fly/docker-python   latest         a088bc9b278c   1 second ago   83.4MB
 ```
