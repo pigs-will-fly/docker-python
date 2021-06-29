@@ -1,4 +1,4 @@
-name: Publish Docker image to pkg.github.com
+name: Publish Docker image to ghcr.io public repository
 
 # https://help.github.com/en/actions/reference/events-that-trigger-workflows
 on:
@@ -31,7 +31,7 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Set commit tag
+    - name: Set commit tag that will be used to tag a specific version
       # run: echo "COMMIT_TAG=${GITHUB_REF:10}" >> $GITHUB_ENV
       run: echo "COMMIT_TAG=v3.9.5" >> $GITHUB_ENV
 
@@ -48,8 +48,12 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${COMMIT_TAG}, latest
+        tags: ${REGISTRY}/${IMAGE_NAME}:${COMMIT_TAG}, ${REGISTRY}/${IMAGE_NAME}:latest
         build-args: |
           GITHUB_SHA=${GITHUB_SHA}
         cache-from: |
           ${REGISTRY}/${IMAGE_NAME}:latest
+
+    - name: Inspect an image
+      run: |
+        docker images
