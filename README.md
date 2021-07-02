@@ -21,7 +21,7 @@ docker pull ghcr.io/pigs-will-fly/docker-python:v3.9.5
 
 ```
 $ python -V
-Python 3.9.5
+Python 3.9.6
 
 $ pip list
 Package        Version
@@ -33,7 +33,7 @@ mysqlclient    2.0.3
 pip            21.1.3
 pycparser      2.20
 rcssmin        1.0.6
-regex          2021.4.4
+regex          2021.7.1
 setuptools     57.0.0
 wheel          0.36.2
 zope.event     4.5.0
