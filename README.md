@@ -33,13 +33,13 @@ mysqlclient    2.0.3
 pip            21.1.3
 pycparser      2.20
 rcssmin        1.0.6
-regex          2021.7.1
+regex          2021.7.6
 setuptools     57.0.0
 wheel          0.36.2
 zope.event     4.5.0
 zope.interface 5.4.0
 
 $ docker images | head -n2
-REPOSITORY                    TAG            IMAGE ID       CREATED        SIZE
-pigs-will-fly/docker-python   latest         a3eae2f41078   1 second ago   83.4MB
+REPOSITORY                    TAG            IMAGE ID       CREATED                  SIZE
+pigs-will-fly/docker-python   latest         5bbbed4a2c3d   Less than a second ago   83.5MB
 ```
