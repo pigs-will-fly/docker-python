@@ -15,7 +15,7 @@ jobs:
     - name: Build the Docker image
       env:
         # @see https://testdriven.io/blog/faster-ci-builds-with-docker-cache/
-        CACHE_IMAGE: suggap/python:latest
+        CACHE_IMAGE: ghcr.io/pigs-will-fly/docker-python
       run: |
         docker pull $CACHE_IMAGE
         docker build . \
