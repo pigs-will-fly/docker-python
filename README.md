@@ -5,13 +5,7 @@ Alpine-based docker image for running Python 3.9 applications (with dependencies
 
 ## How to pull it?
 
-> https://hub.docker.com/repository/docker/suggap/python
-
-```
-docker pull suggap/python:3.9.6
-```
-
-or from [the GitHub's registry](https://github.com/pigs-will-fly/docker-python/pkgs/container/docker-python):
+From [the GitHub's registry](https://github.com/pigs-will-fly/docker-python/pkgs/container/docker-python):
 
 ```
 docker pull ghcr.io/pigs-will-fly/docker-python:3.9.6
