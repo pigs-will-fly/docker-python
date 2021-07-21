@@ -14,7 +14,7 @@ docker pull suggap/python:3.9.6
 or from [the GitHub's registry](https://github.com/pigs-will-fly/docker-python/pkgs/container/docker-python):
 
 ```
-docker pull ghcr.io/pigs-will-fly/docker-python:v3.9.5
+docker pull ghcr.io/pigs-will-fly/docker-python:3.9.6
 ```
 
 ## What's inside?
