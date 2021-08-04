@@ -20,20 +20,20 @@ Python 3.9.6
 $ pip list
 Package        Version
 -------------- --------
-cffi           1.14.5
+cffi           1.14.6
 gevent         21.1.2
 greenlet       1.1.0
 mysqlclient    2.0.3
-pip            21.1.3
+pip            21.2.2
 pycparser      2.20
 rcssmin        1.0.6
-regex          2021.7.6
-setuptools     57.0.0
+regex          2021.8.3
+setuptools     57.4.0
 wheel          0.36.2
 zope.event     4.5.0
 zope.interface 5.4.0
 
 $ docker images | head -n2
-REPOSITORY                    TAG            IMAGE ID       CREATED                  SIZE
-pigs-will-fly/docker-python   latest         5bbbed4a2c3d   Less than a second ago   83.5MB
+REPOSITORY                            TAG            IMAGE ID       CREATED        SIZE
+pigs-will-fly/docker-python           latest         b99f6a236508   1 second ago   83.7MB
 ```
