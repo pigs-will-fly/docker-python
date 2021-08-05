@@ -23,4 +23,8 @@ RUN apk update &&\
     apk del .build-deps &&\
     rm -rf /root/* /tmp/*
 
-RUN python -V; pip list
+# tag an image
+ARG GITHUB_SHA
+ENV GITHUB_SHA ${GITHUB_SHA}
+
+RUN python -V; pip list; env
