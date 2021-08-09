@@ -21,10 +21,10 @@ $ pip list
 Package        Version
 -------------- --------
 cffi           1.14.6
-gevent         21.1.2
-greenlet       1.1.0
+gevent         21.8.0
+greenlet       1.1.1
 mysqlclient    2.0.3
-pip            21.2.2
+pip            21.2.3
 pycparser      2.20
 rcssmin        1.0.6
 regex          2021.8.3
