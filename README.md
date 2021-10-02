@@ -27,7 +27,7 @@ mysqlclient    2.0.3
 pip            21.2.4
 pycparser      2.20
 rcssmin        1.0.6
-regex          2021.9.24
+regex          2021.9.30
 setuptools     57.5.0
 wheel          0.37.0
 zope.event     4.5.0
