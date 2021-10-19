@@ -1,4 +1,4 @@
-# Base image for Python 3.9 app with the following libraries and PyPI packages (that take quite a long time to compile):
+# Base image for Python 3.10 app with the following libraries and PyPI packages (that take quite a long time to compile):
 # * gevent
 # * cffi
 # * MySQL connector for mysqlclient
@@ -6,7 +6,7 @@
 # * rccsmin
 
 # https://hub.docker.com/_/python
-FROM python:3.9.7-alpine
+FROM python:3.10-alpine
 
 COPY requirements.txt /tmp/requirements.txt
 
