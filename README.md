@@ -19,15 +19,15 @@ Python 3.10.0
 
 $ pip list
 Package        Version
--------------- ----------
+-------------- ---------
 cffi           1.15.0
 gevent         21.8.0
 greenlet       1.1.2
 mysqlclient    2.0.3
-pip            21.3
+pip            21.3.1
 pycparser      2.20
 rcssmin        1.0.6
-regex          2021.10.21
+regex          2021.11.2
 setuptools     57.5.0
 wheel          0.37.0
 zope.event     4.5.0
