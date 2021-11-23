@@ -1,5 +1,5 @@
 cffi
 gevent==21.8.0
-mysqlclient==2.0.3
+mysqlclient==2.1.0
 regex==2021.11.10
 rcssmin==1.0.6
