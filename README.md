@@ -23,10 +23,10 @@ Package        Version
 cffi           1.15.0
 gevent         21.8.0
 greenlet       1.1.2
-mysqlclient    2.0.3
+mysqlclient    2.1.0
 pip            21.3.1
 pycparser      2.21
-rcssmin        1.0.6
+rcssmin        1.1.0
 regex          2021.11.10
 setuptools     57.5.0
 wheel          0.37.0
