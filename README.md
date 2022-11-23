@@ -15,25 +15,25 @@ docker pull ghcr.io/pigs-will-fly/docker-python:3.10.0
 
 ```
 $ python -V
-Python 3.10.0
+Python 3.10.8
 
 $ pip list
 Package        Version
--------------- ----------
-cffi           1.15.0
-gevent         21.8.0
-greenlet       1.1.2
-mysqlclient    2.1.0
-pip            21.3.1
+-------------- --------
+cffi           1.15.1
+gevent         22.10.2
+greenlet       2.0.1
+mysqlclient    2.1.1
+pip            22.3.1
 pycparser      2.21
-rcssmin        1.1.0
-regex          2021.11.10
-setuptools     57.5.0
-wheel          0.37.0
+rcssmin        1.1.1
+regex          2022.6.2
+setuptools     63.2.0
+wheel          0.38.4
 zope.event     4.5.0
-zope.interface 5.4.0
+zope.interface 5.5.2
 
 $ docker images | head -n2
-REPOSITORY                            TAG           IMAGE ID       CREATED        SIZE
-pigs-will-fly/docker-python           latest        128beef5fc4e   1 second ago   93.4MB
+REPOSITORY                            TAG             IMAGE ID       CREATED                  SIZE
+pigs-will-fly/docker-python           latest          ff98e8154044   Less than a second ago   121MB
 ```
