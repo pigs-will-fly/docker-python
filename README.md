@@ -34,6 +34,6 @@ zope.event     4.5.0
 zope.interface 5.5.2
 
 $ docker images | head -n2
-REPOSITORY                            TAG           IMAGE ID       CREATED        SIZE
-pigs-will-fly/docker-python           latest        128beef5fc4e   1 second ago   93.4MB
+REPOSITORY                            TAG             IMAGE ID       CREATED                  SIZE
+pigs-will-fly/docker-python           latest          ff98e8154044   Less than a second ago   121MB
 ```
