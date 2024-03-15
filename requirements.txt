@@ -1,5 +1,5 @@
 cffi
-gevent==23.9.1
+gevent==24.2.1
 mysqlclient==2.2.4
 regex==2023.12.25
 rcssmin==1.1.2
