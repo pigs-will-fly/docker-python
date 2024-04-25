@@ -8,32 +8,32 @@ Alpine-based docker image for running Python 3.x applications (with dependencies
 From [the GitHub's registry](https://github.com/pigs-will-fly/docker-python/pkgs/container/docker-python):
 
 ```
-docker pull ghcr.io/pigs-will-fly/docker-python:3.12.2
+docker pull ghcr.io/pigs-will-fly/docker-python:3.12.3
 ```
 
 ## What's inside?
 
 ```
 $ python -V
-Python 3.12.2
+Python 3.12.3
 
 $ pip list
 Package        Version
--------------- ----------
+-------------- ---------
 cffi           1.16.0
-gevent         23.9.1
+gevent         24.2.1
 greenlet       3.0.3
 mysqlclient    2.2.4
 pip            24.0
-pycparser      2.21
+pycparser      2.22
 rcssmin        1.1.2
-regex          2023.12.25
-setuptools     69.0.3
-wheel          0.42.0
+regex          2024.4.16
+setuptools     69.2.0
+wheel          0.43.0
 zope.event     5.0
-zope.interface 6.2
+zope.interface 6.3
 
 $ docker images | head -n2
-REPOSITORY                            TAG         IMAGE ID       CREATED          SIZE
-pigs-will-fly/docker-python           latest      993d447d73af   1 second ago     121MB
+REPOSITORY                            TAG         IMAGE ID       CREATED         SIZE
+pigs-will-fly/docker-python           latest      b38203b9e1b8   1 second ago    127MB
 ```
