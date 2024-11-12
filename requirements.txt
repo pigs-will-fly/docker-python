@@ -2,4 +2,4 @@ cffi
 gevent==24.11.1
 mysqlclient==2.2.4
 regex==2024.11.6
-rcssmin==1.1.2
+rcssmin==1.1.3
