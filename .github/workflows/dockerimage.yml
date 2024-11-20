@@ -12,6 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4.2.2
+
     - name: Build the Docker image
       env:
         # @see https://testdriven.io/blog/faster-ci-builds-with-docker-cache/
@@ -21,4 +22,8 @@ jobs:
         docker build . \
           --cache-from $CACHE_IMAGE \
           --tag ${{ github.repository }}
+
+    - name: Show details
+      run: |
         docker images
+        docker run --rm ${{ github.repository }} pip list
