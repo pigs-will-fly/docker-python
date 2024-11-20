@@ -16,6 +16,7 @@ RUN apk update &&\
     apk add --no-cache --virtual .build-deps \
         build-base \
         gcc \
+        git \
         libffi-dev \
         mariadb-dev &&\
     pip install --upgrade pip && pip install -r /tmp/requirements.txt \
@@ -25,6 +26,6 @@ RUN apk update &&\
 
 # tag an image
 ARG GITHUB_SHA
-ENV GITHUB_SHA ${GITHUB_SHA}
+ENV GITHUB_SHA=${GITHUB_SHA}
 
 RUN python -V; pip list; env
