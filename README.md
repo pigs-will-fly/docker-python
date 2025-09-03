@@ -28,7 +28,7 @@ mysqlclient    2.2.7
 pip            25.2
 pycparser      2.22
 rcssmin        1.2.1
-regex          2024.11.6
+regex          2025.9.1
 setuptools     80.9.0
 zope.event     5.1.1
 zope.interface 7.2
