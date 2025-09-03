@@ -21,16 +21,16 @@ $ pip list
 Package        Version
 -------------- ------------------
 cffi           1.17.1
-gevent         25.5.1
-greenlet       3.2.2
+gevent         25.8.2
+greenlet       3.2.4
 msgspec        0.18.6+30.g595c33c
 mysqlclient    2.2.7
-pip            25.1.1
+pip            25.2
 pycparser      2.22
 rcssmin        1.2.1
 regex          2024.11.6
-setuptools     80.4.0
-zope.event     5.0
+setuptools     80.9.0
+zope.event     5.1.1
 zope.interface 7.2
 
 $ docker images | head -n2
