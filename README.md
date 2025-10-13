@@ -21,14 +21,14 @@ $ pip list
 Package        Version
 -------------- ------------------
 cffi           2.0.0
-gevent         25.8.2
+gevent         25.9.1
 greenlet       3.2.4
 msgspec        0.18.6+30.g595c33c
 mysqlclient    2.2.7
 pip            25.2
 pycparser      2.23
 rcssmin        1.2.1
-regex          2025.9.1
+regex          2025.9.18
 setuptools     80.9.0
 zope.event     6.0
 zope.interface 8.0.1
