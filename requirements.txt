@@ -1,6 +1,6 @@
 cffi
 gevent==25.9.1
 msgspec @ git+https://github.com/jcrist/msgspec@595c33c4a71c6d0c539b82233982a65819e240cf
-mysqlclient==2.2.7
+mysqlclient==2.2.8
 regex==2026.1.15
 rcssmin==1.2.2
