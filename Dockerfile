@@ -6,7 +6,7 @@
 # * rccsmin
 
 # https://hub.docker.com/_/python
-FROM python:3.14.5-alpine
+FROM python:3.15.0rc1-alpine
 
 COPY requirements.txt /tmp/requirements.txt
 
