@@ -1,6 +1,7 @@
 # Base image for Python 3.x app with the following libraries and PyPI packages (that take quite a long time to compile):
-# * gevent
 # * cffi
+# * gevent
+# * msgspec 
 # * MySQL connector for mysqlclient
 # * regex
 # * rccsmin
@@ -26,6 +27,6 @@ RUN apk update &&\
 
 # tag an image
 ARG GITHUB_SHA
-ENV GITHUB_SHA=${GITHUB_SHA}
+ENV PYTHON_GITHUB_SHA=${GITHUB_SHA}
 
 RUN python -V; pip list; env
