@@ -13,13 +13,18 @@ jobs:
     steps:
     - uses: actions/checkout@v7.0.1
 
-    - name: Build the Docker image
+    # https://docs.docker.com/build/ci/github-actions/multi-platform/
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v4
+
+    - name: Build the Docker image for different platforms
       env:
         # @see https://testdriven.io/blog/faster-ci-builds-with-docker-cache/
         CACHE_IMAGE: ghcr.io/pigs-will-fly/docker-python
       run: |
         docker pull $CACHE_IMAGE
-        docker build . \
+        docker buildx build . \
+          --platform="linux/amd64,linux/arm64" \
           --cache-from $CACHE_IMAGE \
           --tag ${{ github.repository }}
 
