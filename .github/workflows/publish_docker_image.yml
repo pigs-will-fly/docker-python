@@ -22,4 +22,5 @@ jobs:
         uses: macbre/push-to-ghcr@v18
         with:
           image_name: ${{ github.repository }}
+          platforms: "linux/amd64,linux/arm64,linux/arm/v7"
           github_token: ${{ secrets.GITHUB_TOKEN }}
