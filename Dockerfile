@@ -29,4 +29,6 @@ RUN apk update &&\
 ARG GITHUB_SHA
 ENV PYTHON_GITHUB_SHA=${GITHUB_SHA}
 
+LABEL org.opencontainers.image.description "Base image for Python 3.x app with some libraries and PyPI packages that take quite a long time to compile"
+
 RUN python -V; pip list; env
