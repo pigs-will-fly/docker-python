@@ -25,5 +25,7 @@ jobs:
 
     - name: Show details
       run: |
-        docker images
+        set -x
+        docker images --format table
+        docker run --rm ${{ github.repository }} python -V
         docker run --rm ${{ github.repository }} pip list
