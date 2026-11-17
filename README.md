@@ -23,15 +23,15 @@ Package        Version
 cffi           2.1.1
 gevent         26.9.0
 greenlet       3.5.6
-mysqlclient    2.3.0
+mysqlclient    2.3.1
 pip            26.3
 pycparser      3.12
 rcssmin        1.3.0
-regex          2026.9.29
+regex          2026.11.9
 zope.event     6.2
 zope.interface 8.7
 
 $ docker images | head -n2
-REPOSITORY                                   TAG       IMAGE ID       CREATED                  SIZE
-pigs-will-fly/docker-python                  latest    a19979fe4a32   Less than a second ago   185MB
+REPOSITORY                                   TAG       IMAGE ID       CREATED         SIZE
+pigs-will-fly/docker-python                  latest    0da45086beab   3 seconds ago   185MB
 ```
