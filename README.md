@@ -8,18 +8,18 @@ Alpine-based multi-arch (`linux/amd64,linux/arm64`) container image for running 
 From [the GitHub's registry](https://github.com/pigs-will-fly/docker-python/pkgs/container/docker-python):
 
 ```
-docker pull ghcr.io/pigs-will-fly/docker-python:3.15.0
+docker pull ghcr.io/pigs-will-fly/docker-python:3.15.2
 ```
 
 ## What's inside?
 
 ```
 $ python -V
-Python 3.15.0
+Python 3.15.2
 
 $ pip list
 Package        Version
--------------- ---------
+-------------- ----------
 cffi           2.1.1
 gevent         26.9.0
 greenlet       3.5.6
@@ -27,11 +27,11 @@ mysqlclient    2.3.1
 pip            26.3
 pycparser      3.12
 rcssmin        1.3.0
-regex          2026.11.9
+regex          2026.11.15
 zope.event     6.2
 zope.interface 8.7
 
-$ docker images | head -n2
+$ docker images --format table | head -n2
 REPOSITORY                                   TAG       IMAGE ID       CREATED         SIZE
-pigs-will-fly/docker-python                  latest    0da45086beab   3 seconds ago   185MB
+pigs-will-fly/docker-python                  latest    17ffb1e616c2   3 seconds ago   184MB
 ```
